@@ -17,9 +17,9 @@
         *ngIf="showSecret"
       >Secret Password = tuna</p>
       <p 
-        *ngFor="let logItem of logs"
-        [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}"
-        [ngClass]="{'white-text': logItem >= 5}"
+        *ngFor="let logItem of logs; let i = index"
+        [ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'transparent'}"
+        [ngClass]="{'white-text': i >= 5}"
       >{{ logItem }}</p>
     </div>
   </div>
